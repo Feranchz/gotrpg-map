@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/gotrpg-map/static/css/main.a2e679a1.chunk.css",
-    "main.js": "/gotrpg-map/static/js/main.12621f7f.chunk.js",
-    "main.js.map": "/gotrpg-map/static/js/main.12621f7f.chunk.js.map",
+    "main.js": "/gotrpg-map/static/js/main.f2fa7414.chunk.js",
+    "main.js.map": "/gotrpg-map/static/js/main.f2fa7414.chunk.js.map",
     "runtime-main.js": "/gotrpg-map/static/js/runtime-main.04f9845e.js",
     "runtime-main.js.map": "/gotrpg-map/static/js/runtime-main.04f9845e.js.map",
     "static/js/2.d4a92bcb.chunk.js": "/gotrpg-map/static/js/2.d4a92bcb.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.04f9845e.js",
     "static/js/2.d4a92bcb.chunk.js",
     "static/css/main.a2e679a1.chunk.css",
-    "static/js/main.12621f7f.chunk.js"
+    "static/js/main.f2fa7414.chunk.js"
   ]
 }
