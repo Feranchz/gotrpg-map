@@ -1,58 +1,267 @@
-import { Place } from "./store/models";
-export const data: Place[] = [
+export const castles = [
   {
-    title: "Eiffel Tower",
-    description:
-      "The Eiffel Tower (/ˈaɪfəl/ EYE-fəl; French: tour Eiffel [tuʁ‿ɛfɛl]) is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.",
-    picture:
-      "https://t2.gstatic.com/images?q=tbn:ANd9GcQ8iFga8aDttbI5iBkKgDmqOSV7LdcsVkfDHezlLYWrGDT7OajbZJh4qS1kiNbN1kkUHmz4SWPOS98AC5HubKYyKw",
-    position: [48.858222, 2.2945],
-    seeMoreLink: "https://en.wikipedia.org/wiki/Eiffel_Tower",
-  },
-
-  {
-    title: "Louvre Museum",
-    description:
-      "The Louvre (English: /ˈluːv(rə)/ LOOV(-rə)[3]), or the Louvre Museum (French: Musée du Louvre [myze dy luvʁ]), is the world's largest art museum and a historic monument in Paris, France. A central landmark of the city, it is located on the Right Bank of the Seine in the city's 1st arrondissement (district or ward). Approximately 38,000 objects from prehistory to the 21st century are exhibited over an area of 72,735 square meters (782,910 square feet). In 2019, the Louvre received 9.6 million visitors, making it the most visited museum in the world.",
-    picture:
-      "https://media-exp1.licdn.com/dms/image/C4D1BAQHRblI0BcMdMg/company-background_10000/0/1552905854220?e=2159024400&v=beta&t=l1ZJjkecqUDP1QjmmdY8TvCJHY5e2YM41UuTWCEKa7c",
-    position: [48.861111, 2.336389],
-    seeMoreLink: "https://en.wikipedia.org/wiki/Louvre",
+    id: 1,
+    title: "Invernalia",
+    position: [26.598351182358293, 14.556884765625002],
+    kingdom: "Reino del Norte"
   },
   {
-    title: "Notre-Dame de Paris",
-    description:
-      'Notre-Dame de Paris (French: [nɔtʁə dam də paʁi]; meaning "Our Lady of Paris"), referred to simply as Notre-Dame,is a medieval Catholic cathedral on the Île de la Cité in the 4th arrondissement of Paris. The cathedral was consecrated to the Virgin Mary and considered to be one of the finest examples of French Gothic architecture. Its pioneering use of the rib vault and flying buttress, its enormous and colourful rose windows, as well as the naturalism and abundance of its sculptural decoration set it apart from the earlier Romanesque style. Major components that make Notre Dame stand out include its large historic organ and its immense church bells.',
-    picture:
-      "https://t1.gstatic.com/images?q=tbn:ANd9GcTP7Kev8E9D4tRQx70zbwJejhXbrWDSHe4YPnZRm2_iF3yXnB-J8_f6BbJov2HUz1IWVM2tpRLR2QEqkfyEkIsX1Q",
-    position: [48.853, 2.3498],
-    seeMoreLink: "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
+    id: 2,
+    title: "Fuerte Terror",
+    position: [27.283925600229757, 19.978637695312504],
+    kingdom: "Reino del Norte"
   },
   {
-    title: "Arc de Triomphe",
-    description:
-      "The Arc de Triomphe de l'Étoile, lit. 'Triumphal Arch of the Star') is one of the most famous monuments in Paris, France, standing at the western end of the Champs-Élysées at the centre of Place Charles de Gaulle, formerly named Place de l'Étoile—the étoile or \"star\" of the juncture formed by its twelve radiating avenues. The location of the arc and the plaza is shared between three arrondissements, 16th (south and west), 17th (north), and 8th (east). The Arc de Triomphe honours those who fought and died for France in the French Revolutionary and Napoleonic Wars, with the names of all French victories and generals inscribed on its inner and outer surfaces. Beneath its vault lies the Tomb of the Unknown Soldier from World War I.",
-    picture:
-      "https://t0.gstatic.com/images?q=tbn:ANd9GcQoZnddnNXMsy0UgYRljMrNsvL_HgNLqIJEfaeIqbfEVTiPKpm-ixUaV24h0dplYQRRE-HRH1kncMV2elUz70ensw",
-    position: [48.8738, 2.295],
-    seeMoreLink: "https://en.wikipedia.org/wiki/Arc_de_Triomphe",
+    id: 3,
+    title: "Bastion Kar",
+    position: [28.99372720461893, 23.543701171875004],
+    kingdom: "Reino del Norte"
   },
   {
-    title: "Basilica of the Sacred Heart of Jesus",
-    description:
-      "The Basilica of the Sacred Heart of Paris, commonly known as Sacré-Cœur Basilica and often simply Sacré-Cœur (French: Basilique du Sacré-Cœur, pronounced [sakʁe kœʁ]), is a Roman Catholic church and minor basilica, dedicated to the Sacred Heart of Jesus, in Paris, France.",
-    picture:
-      "https://i.f1g.fr/media/_uploaded/805x1000_crop/quiz-sacr%C3%A9-coeur/quiz-sacre-coeur.jpg",
-    position: [48.886694, 2.343],
-    seeMoreLink: "https://en.wikipedia.org/wiki/Sacré-Cœur,_Paris",
+    id: 4,
+    title: "Bosquespeso",
+    position: [29.141338588703846, 10.64650297164917],
+    kingdom: "Reino del Norte"
   },
   {
-    title: "Musée d'Orsay",
-    description:
-      "The Musée d'Orsay (UK: /ˌmjuːzeɪ dɔːrˈseɪ/ MEW-zay dor-SAY, US: /mjuːˈzeɪ -/ mew-ZAY -⁠, French: [myze dɔʁsɛ]) is a museum in Paris, France, on the Left Bank of the Seine. It is housed in the former Gare d'Orsay, a Beaux-Arts railway station built between 1898 and 1900. The museum holds mainly French art dating from 1848 to 1914, including paintings, sculptures, furniture, and photography. It houses the largest collection of Impressionist and post-Impressionist masterpieces in the world, by painters including Monet, Manet, Degas, Renoir, Cézanne, Seurat, Sisley, Gauguin, and Van Gogh. Many of these works were held at the Galerie nationale du Jeu de Paume prior to the museum's opening in 1986. It is one of the largest art museums in Europe. Musée d'Orsay had more than 3.6 million visitors in 2019.",
-    picture:
-      "https://aws-tiqets-cdn.imgix.net/images/content/2e18da2affe84093a455ee0349673772.jpg?auto=format&fit=crop&ixlib=python-3.2.1&q=25&s=63adb11bd0001a73e66aab61e54489cf&w=375&h=250&dpr=2.625",
-    position: [48.86, 2.326389],
-    seeMoreLink: "https://en.wikipedia.org/wiki/Musée_d'Orsay",
+    id: 5,
+    title: "Isla del Oso",
+    position: [32.52144146261787, 10.498616695404053],
+    kingdom: "Reino del Norte"
   },
+  {
+    id: 6,
+    title: "Foso Cailin",
+    position: [20.32975317703064, 14.524773359298708],
+    kingdom: "Reino del Norte"
+  },
+  {
+    id: 7,
+    title: "Los Gemelos",
+    position: [14.47285036171142, 13.297179937362673],
+    kingdom: "Reino de los Rios"
+  },
+  {
+    id: 8,
+    title: "Aguasdulces",
+    position: [9.483371065507752, 13.299186229705812],
+    kingdom: "Reino de los Rios"
+  },
+  {
+    id: 9,
+    title: "Harrenhall",
+    position: [8.345880725263267, 17.38768815994263],
+    kingdom: "Reino de los Rios"
+  },
+  {
+    id: 10,
+    title: "Princesa Rosada",
+    position: [7.0245719178463695, 13.062744140625002],
+    kingdom: "Reino de los Rios"
+  },
+  {
+    id: 11,
+    title: "Rapsodia",
+    position: [14.175857485729006, 17.44766235351563],
+    kingdom: "Reino de la Montaña y el Valle"
+  },
+  {
+    id: 12,
+    title: "Nido de Águilas",
+    position: [12.207295065812337, 19.94342565536499],
+    kingdom: "Reino de la Montaña y el Valle"
+  },
+  {
+    id: 13,
+    title: "Puerto Gaviota",
+    position: [11.307160637550913, 24.04091835021973],
+    kingdom: "Reino de la Montaña y el Valle"
+  },
+  {
+    id: 14,
+    title: "Piedra de las Runas",
+    position: [12.332654575642582, 24.62068319320679],
+    kingdom: "Reino de la Montaña y el Valle"
+  },
+  {
+    id: 15,
+    title: "Castamere",
+    position: [8.510190706784456, 8.362505435943605],
+    kingdom: "Reino de la Roca"
+  },
+  {
+    id: 16,
+    title: "Roca Casterly",
+    position: [5.572719638973166, 7.287926673889161],
+    kingdom: "Reino de la Roca"
+  },
+  {
+    id: 17,
+    title: "Lannisport",
+    position: [5.200834806675277, 7.331871986389161],
+    kingdom: "Reino de la Roca"
+  },
+  {
+    id: 18,
+    title: "Refugio de Plata",
+    position: [5.0893839424026055, 10.52666187286377],
+    kingdom: "Reino de la Roca"
+  },
+  {
+    id: 19,
+    title: "Altojardín",
+    position: [-2.7778084414524167, 10.713869333267214],
+    kingdom: "Reino del Dominio"
+  },
+  {
+    id: 20,
+    title: "Puenteamargo",
+    position: [1.0666421798369343, 14.297370314598085],
+    kingdom: "Reino del Dominio"
+  },
+  {
+    id: 21,
+    title: "Valdehierba",
+    position: [0.2942370356364667, 17.31655597686768],
+    kingdom: "Reino del Dominio"
+  },
+  {
+    id: 22,
+    title: "Antigua",
+    position: [-6.574830404653334, 7.765231132507325],
+    kingdom: "Reino del Dominio"
+  },
+  {
+    id: 23,
+    title: "El Rejo",
+    position: [-10.292361499981409, 6.3111412525177],
+    kingdom: "Reino del Dominio"
+  },
+  {
+    id: 24,
+    title: "Desembarco del Rey",
+    position: [3.9595080724904865, 19.084973931312565],
+    kingdom: "Tierras de la Corona"
+  },
+  {
+    id: 25,
+    title: "Marcaderiva",
+    position: [6.618037166481231, 23.448547124862674],
+    kingdom: "Tierras de la Corona"
+  },
+  {
+    id: 26,
+    title: "Rocadragón",
+    position: [7.044600944416188, 24.347795248031616],
+    kingdom: "Tierras de la Corona"
+  },
+  {
+    id: 27,
+    title: "Torreón Cosecha",
+    position: [1.3781470158323221, 22.76698708534241],
+    kingdom: "Tierras de la Tormenta"
+  },
+  {
+    id: 28,
+    title: "Bastión de Tormentas",
+    position: [-0.668659528754353, 22.705038785934452],
+    kingdom: "Tierras de la Tormenta"
+  },
+  {
+    id: 29,
+    title: "Refugio Negro",
+    position: [-4.492210493588295, 16.201078891754154],
+    kingdom: "Tierras de la Tormenta"
+  },
+  {
+    id: 30,
+    title: "Isla de Tarth",
+    position: [0.30036311855231773, 24.7368335723877],
+    kingdom: "Tierras de la Tormenta"
+  }
 ];
+
+export const paths = [
+  [1, 4, 6],
+  [1, 2, 6],
+  [1, 6, 6],
+  [2, 3, 6],
+  [2, 1, 6],
+  [3, 2, 6],
+  [4, 5, 12],
+  [4, 1, 6],
+  [5, 4, 12],
+  [6, 1, 6],
+  [6, 7, 12],
+  [7, 6, 12],
+  [7, 8, 6],
+  [7, 9, 6],
+  [7, 11, 12],
+  [8, 7, 6],
+  [8, 9, 6],
+  [8, 10, 6],
+  [8, 15, 12],
+  [9, 7, 6],
+  [9, 8, 6],
+  [9, 10, 6],
+  [9, 12, 18],
+  [10, 8, 6],
+  [10, 9, 6],
+  [10, 15, 12],
+  [10, 18, 12],
+  [10, 20, 18],
+  [11, 7, 6],
+  [11, 12, 6],
+  [12, 11, 6],
+  [12, 9, 18],
+  [12, 13, 6],
+  [12, 14, 6],
+  [13, 12, 6],
+  [13, 14, 3],
+  [14, 12, 6],
+  [14, 13, 3],
+  [15, 8, 12],
+  [15, 10, 12],
+  [15, 16, 6],
+  [16, 15, 6],
+  [16, 18, 6],
+  [16, 17, 6],
+  [17, 16, 6],
+  [17, 18, 3],
+  [17, 19, 12],
+  [18, 10, 12],
+  [18, 16, 6],
+  [18, 17, 6],
+  [18, 20, 12],
+  [19, 17, 12],
+  [19, 20, 6],
+  [19, 21, 6],
+  [19, 22, 6],
+  [20, 18, 12],
+  [20, 19, 6],
+  [20, 21, 6],
+  [21, 20, 6],
+  [21, 19, 6],
+  [21, 29, 12],
+  [22, 19, 6],
+  [22, 23, 8],
+  [23, 22, 8],
+  [24, 26, 8],
+  [24, 25, 8],
+  [24, 21, 12],
+  [24, 27, 12],
+  [25, 24, 8],
+  [25, 26, 4],
+  [26, 24, 8],
+  [26, 25, 4],
+  [27, 24, 12],
+  [27, 28, 6],
+  [27, 29, 6],
+  [28, 27, 6],
+  [28, 29, 6],
+  [28, 30, 8],
+  [29, 21, 12],
+  [29, 27, 6],
+  [29, 28, 6],
+  [30, 28, 8]
+]
