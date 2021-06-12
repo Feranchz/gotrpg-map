@@ -2,7 +2,7 @@ import { Marker, Tooltip, Polyline } from "react-leaflet"
 import L from 'leaflet'
 
 const CastleIcon = new L.Icon({
-    iconUrl: "/medieval-tower.png",
+    iconUrl: "https://i.imgur.com/U7viYXM.png",
     iconSize: [15, 18]
 })
 
